@@ -8,12 +8,17 @@ import java.io.IOException;
  */
 public class Chomsky {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) throws IOException {
         Gramatica gramatica = Arquivo.lerEGravarGramatica();
+        //gramatica.imprime();
+        SimplificacaoGLC.eliminarVariaveisInalcancaveis(gramatica);
         gramatica.imprime();
+        Producao producaoStart = SimplificacaoGLC.producaoStart(gramatica);
+        SimplificacaoGLC.estadosDaProducao(producaoStart, gramatica);
+        SimplificacaoGLC.variaveisAlcancaveis(gramatica);
+        SimplificacaoGLC.variaveisInalcancaveis(gramatica);
+        System.out.println("Alcancavel: "+SimplificacaoGLC.verificaSeTodosSaoAlcancaveis(gramatica, gramatica.getEstados()));
     }
 
 }

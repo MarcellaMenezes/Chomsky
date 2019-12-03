@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky1/src/chomsky1/Destino.java</file>
-            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky1/src/chomsky1/Gramatica.java</file>
-            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky1/src/chomsky1/Arquivo.java</file>
-            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky1/src/chomsky1/Chomsky1.java</file>
-            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky1/src/chomsky1/Producao.java</file>
-            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky1/src/chomsky1/Utilidades.java</file>
+            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky/src/chomsky/Gramatica.java</file>
+            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky/src/chomsky/Arquivo.java</file>
+            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky/src/chomsky/SimplificacaoGLC.java</file>
+            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky/src/chomsky/Producao.java</file>
+            <file>file:/C:/Users/marce/Desktop/IFET/LFA/GLC/Chomsky/src/chomsky/Chomsky.java</file>
         </group>
     </open-files>
 </project-private>
