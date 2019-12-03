@@ -1,0 +1,9 @@
+S;X;Y;Z;A;B
+a;b;u;v
+S
+S>X;Y;Z
+X>AXA;BXB;Z;#
+Y>AXA;BXB;Z;#
+A>a
+B>b
+Z>Zu;Zv;#
