@@ -7,7 +7,6 @@ import java.util.List;
  * @author marce
  */
 public class Gramatica {
-
         private List<String> estados;
         private List<String> terminais;
         private List<Producao> producoes;
@@ -96,5 +95,27 @@ public class Gramatica {
                                 d.imprime();
                         }
                 }
+        }
+        
+        public String[][] gerarMatriz() {
+                int lenght = producoes.size(), width = 0;
+                
+                for (Producao p : producoes) {
+                        int size = p.getDestinos().size();
+                        if (size > width) 
+                                width = size;
+                }
+                
+                String [][] matrix = new String[lenght][width + 1];
+                
+                for (int i = 0; i < lenght; ++i) {
+                        Producao producao = producoes.get(i);
+                        matrix[i][0] = producao.toString();
+                        for (int j = 0; j < producao.getDestinos().size(); ++j) {
+                                matrix[i][j+1] = producao.getDestinos().get(j).toString();
+                        }
+                } 
+                
+                return matrix;
         }
 }

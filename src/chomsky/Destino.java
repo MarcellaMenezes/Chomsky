@@ -30,8 +30,11 @@ public class Destino {
 
         @Override
         public String toString() {
-                return conjuntoDestino.toString(); 
+                String returnStr = conjuntoDestino.toString();
+                
+                if (!conjuntoDestino.isEmpty())
+                        returnStr = returnStr.substring(1, returnStr.length() -  1);
+                
+                return returnStr; 
         }
-
-    
 }
