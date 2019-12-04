@@ -11,7 +11,7 @@ public class SimplificacaoGLC {
 
     //Eliminar produções inúteis
     //a) Nunca ser alcançada  
-    public static boolean verificaSeEstado(String estado, List<String> estados) {
+    public static boolean possuiEstado(String estado, List<String> estados) {
             return estados.contains(estado);
     }
 
@@ -29,7 +29,7 @@ public class SimplificacaoGLC {
         List<String> estados = new ArrayList<>();
         for (Destino destino : p.getDestinos()) {
             for (String parteDestino : destino.getConjuntoDestino()) {
-                if (verificaSeEstado(parteDestino, g.getEstados())) {
+                if (possuiEstado(parteDestino, g.getEstados())) {
                     estados.add(parteDestino);
                 }
             }
@@ -62,7 +62,7 @@ public class SimplificacaoGLC {
                 for (Destino destino : producao.getDestinos()) {
                     for (String estadoDoDestino : destino.getConjuntoDestino()) {
                         if (estadoDoDestino.equals(producao.getEstado())) {
-                            if (verificaSeEstado(estado, estadosAlcancaveisIndiretamente) == false) { // se ainda n foi add
+                            if (possuiEstado(estado, estadosAlcancaveisIndiretamente) == false) { // se ainda n foi add
                                 estadosAlcancaveisIndiretamente.add(estado);
                             }
                         }
@@ -70,10 +70,10 @@ public class SimplificacaoGLC {
                 }
             }
         }
-        //Utilidades.imprime("Estados Alcancaveis Idiretamente: ", estadosAlcancaveisIndiretamente);
+        Utilidades.imprime("Estados Alcancaveis Idiretamente: ", estadosAlcancaveisIndiretamente);
         return estadosAlcancaveisIndiretamente;
     }
-
+    
     public static boolean verificaSeTodosSaoAlcancaveis(Gramatica gramatica, List<String> estadosAlcancaveis) {
         if (estadosAlcancaveis.size() == gramatica.getProducoes().size()) {
             return true;
@@ -98,7 +98,7 @@ public class SimplificacaoGLC {
         List<String> estadosAlcancaveis = variaveisAlcancaveis(g);
         List<String> estadosInalcancaveis = new ArrayList<>();
         for (String estado : g.getEstados()) {
-            if (!verificaSeEstado(estado, estadosAlcancaveis)) { // se o estado da gramatica não é um estado alcancavel
+            if (!possuiEstado(estado, estadosAlcancaveis)) { // se o estado da gramatica não é um estado alcancavel
                 estadosInalcancaveis.add(estado);
             }
         }

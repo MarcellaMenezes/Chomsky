@@ -11,6 +11,11 @@ public class Producao {
         private String estado;
         private List<Destino> destinos;
 
+        @Override
+        public String toString() {
+                return estado; //To change body of generated methods, choose Tools | Templates.
+        }
+        
         public Producao(String estado, List<Destino> destinos) {
                 this.estado = estado;
                 this.destinos = destinos;

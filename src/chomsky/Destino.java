@@ -28,4 +28,10 @@ public class Destino {
         }
     }
 
+        @Override
+        public String toString() {
+                return conjuntoDestino.toString(); 
+        }
+
+    
 }
